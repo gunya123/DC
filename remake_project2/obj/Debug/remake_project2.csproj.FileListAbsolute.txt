@@ -1,0 +1,34 @@
+C:\고건웅\remake_project2\remake_project2\obj\Debug\remake_project2.csproj.AssemblyReference.cache
+C:\고건웅\remake_project2\remake_project2\obj\Debug\remake_project2.Form1.resources
+C:\고건웅\remake_project2\remake_project2\obj\Debug\remake_project2.Properties.Resources.resources
+C:\고건웅\remake_project2\remake_project2\obj\Debug\remake_project2.csproj.GenerateResource.cache
+C:\고건웅\remake_project2\remake_project2\obj\Debug\remake_project2.csproj.CoreCompileInputs.cache
+C:\고건웅\remake_project2\remake_project2\bin\Debug\remake_project2.exe.config
+C:\고건웅\remake_project2\remake_project2\bin\Debug\remake_project2.exe
+C:\고건웅\remake_project2\remake_project2\bin\Debug\remake_project2.pdb
+C:\고건웅\remake_project2\remake_project2\obj\Debug\remake_project2.exe
+C:\고건웅\remake_project2\remake_project2\obj\Debug\remake_project2.pdb
+C:\고건웅\remake_project2\remake_project2\obj\Debug\remake_project2.csproj.ResolveComReference.cache
+C:\Users\user\Desktop\remake_project2\remake_project2\bin\Debug\remake_project2.exe.config
+C:\Users\user\Desktop\remake_project2\remake_project2\bin\Debug\remake_project2.exe
+C:\Users\user\Desktop\remake_project2\remake_project2\bin\Debug\remake_project2.pdb
+C:\Users\user\Desktop\remake_project2\remake_project2\obj\Debug\remake_project2.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\remake_project2\remake_project2\obj\Debug\remake_project2.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\remake_project2\remake_project2\obj\Debug\remake_project2.csproj.ResolveComReference.cache
+C:\Users\user\Desktop\remake_project2\remake_project2\obj\Debug\remake_project2.Form1.resources
+C:\Users\user\Desktop\remake_project2\remake_project2\obj\Debug\remake_project2.Properties.Resources.resources
+C:\Users\user\Desktop\remake_project2\remake_project2\obj\Debug\remake_project2.csproj.GenerateResource.cache
+C:\Users\user\Desktop\remake_project2\remake_project2\obj\Debug\remake_project2.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\remake_project2\remake_project2\obj\Debug\remake_project2.exe
+C:\Users\user\Desktop\remake_project2\remake_project2\obj\Debug\remake_project2.pdb
+C:\Users\KJH\Documents\카카오톡 받은 파일\remake_project2\remake_project2\bin\Debug\remake_project2.exe.config
+C:\Users\KJH\Documents\카카오톡 받은 파일\remake_project2\remake_project2\bin\Debug\remake_project2.exe
+C:\Users\KJH\Documents\카카오톡 받은 파일\remake_project2\remake_project2\bin\Debug\remake_project2.pdb
+C:\Users\KJH\Documents\카카오톡 받은 파일\remake_project2\remake_project2\obj\Debug\remake_project2.csproj.AssemblyReference.cache
+C:\Users\KJH\Documents\카카오톡 받은 파일\remake_project2\remake_project2\obj\Debug\remake_project2.csproj.ResolveComReference.cache
+C:\Users\KJH\Documents\카카오톡 받은 파일\remake_project2\remake_project2\obj\Debug\remake_project2.Form1.resources
+C:\Users\KJH\Documents\카카오톡 받은 파일\remake_project2\remake_project2\obj\Debug\remake_project2.Properties.Resources.resources
+C:\Users\KJH\Documents\카카오톡 받은 파일\remake_project2\remake_project2\obj\Debug\remake_project2.csproj.GenerateResource.cache
+C:\Users\KJH\Documents\카카오톡 받은 파일\remake_project2\remake_project2\obj\Debug\remake_project2.csproj.CoreCompileInputs.cache
+C:\Users\KJH\Documents\카카오톡 받은 파일\remake_project2\remake_project2\obj\Debug\remake_project2.exe
+C:\Users\KJH\Documents\카카오톡 받은 파일\remake_project2\remake_project2\obj\Debug\remake_project2.pdb
