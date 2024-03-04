@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Ports;
 using System.Linq;
@@ -15,15 +16,12 @@ namespace remake_project2
         Crc16 c1 = new Crc16(); //crc 클래스 객체
         ArrayList arrSerialbuff = new ArrayList(); // 수신용 List 버퍼 선언
         SerialPort sp = new SerialPort(); // 시리얼 포트 객체
-        bool serialPort_setting = false; //포트 세팅 적용을 알리는 flag
-        bool serialOpenCheck = false; //포트 Open 상태 flag
+        bool timeFlag = false;
         byte[] writeCRC = new byte[1024]; //TX crc 버퍼
         byte[] data = new byte[255];
         //port setting
         string port; //포트 이름
-        int baud_rate;
-        int data_bit;
-
+        
         int bytesToRead = 1; // 1개씩 바이트를 읽어오도록 시킨다.
 
         static string txBuf = null;
@@ -45,7 +43,7 @@ namespace remake_project2
         {
             InitializeComponent();
             this.spBox.DropDown += new System.EventHandler(comboBox_portDropDownEvent); // 콤보 박스가 드롭다운 되도록 해주는 이벤트
-
+            cycleTimeBox.KeyDown += TextBox1_KeyDown; // cycleTimeBox에 KeyDown 이벤트 핸들러 등록 (ex: 엔터 치면 입력되게 하는 등의 이벤트)
             rxTextBox.ScrollBars = ScrollBars.Vertical;
             rxTextBox.TextChanged += TextBox_TextChanged;
 
@@ -101,6 +99,7 @@ namespace remake_project2
                 pictureBox1.Image = Properties.Resources.GreenLED_;
                 start_engine();
                 timer1.Start();
+                loopTimer.Start();
                 Save_File();
                 saveTimer.Start();
                 label_status.Text = "포트가 열렸습니다";
@@ -155,12 +154,14 @@ namespace remake_project2
                     {
                         rxTextBox.Text += "Tx : " + txBuf.Remove(txBuf.Length - 6) + Environment.NewLine; // $"{DateTime.Now:yy.MM.dd_HH:mm:ss tt}" + 
                     }
-
                     txBuf = null;
                 }
                 else
                 {
                     MessageBox.Show("포트가 닫혀있습니다.");
+                    timer1.Stop();
+                    loopTimer.Stop();
+                    
                 }
             }
 
@@ -211,16 +212,16 @@ namespace remake_project2
                     {
                         float[] result_V = new float[5];
 
-                        // 03 패킷의 처리
+                        // 03 패킷의 처리 및 각 항목에 맞게 값변환
                         byte[] truncatedArray = data.Take(cnt).ToArray();
                         for( int i = 0; i < 5; i++)
                         {
                             result_V[i] = (data[2*i+3] << 8) | data[2*i+4];
                         }
                         resultValue[0] = (result_V[0] / 1000.0f).ToString();
-                        resultValue[1] = (result_V[1] + 1.0f).ToString();
-                        resultValue[2] = (result_V[2] / 1000.0f).ToString();
-                        resultValue[3] = (result_V[3] + 1.0f).ToString();
+                        resultValue[1] = (result_V[1]).ToString();
+                        resultValue[2] = (result_V[2]).ToString();
+                        resultValue[3] = (result_V[3]).ToString();
                         resultValue[4] = result_V[4].ToString();
                         
                         textBox6.Text = resultValue[2];
@@ -274,6 +275,7 @@ namespace remake_project2
                         ProcessPacket(truncatedArray);
                         cnt = 0;  // 카운트 초기화
                         flag = false;
+
                     }
 
                     else
@@ -368,7 +370,7 @@ namespace remake_project2
         private void start_engine()
         {
             cycleTimeBox.Text = "1";
-            refV_Box.Text = "5";
+            refV_Box.Text = "5000";
             aveRangeBox.Text = "1";
             caliV_Box.Text = "0";
         }
@@ -388,12 +390,24 @@ namespace remake_project2
         //
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (!interuptOn)
-            {
-                //sp.SendSerialComm(_sendBuf, 6);             
-                SerialPort_Write(_sendBuf);
-                Task.Delay(130);
-            }
+            
+                if (!interuptOn)
+                {
+                    //sp.SendSerialComm(_sendBuf, 6);             
+                    SerialPort_Write(_sendBuf);
+                    /*
+                    Stopwatch stopwatch = new Stopwatch();
+                    stopwatch.Restart();
+                    stopwatch.Stop();
+                    int remainingTime = (int)(2000 - stopwatch.ElapsedMilliseconds);
+
+                    if (remainingTime > 0)
+                    {
+                        Task.Delay(remainingTime);
+                    }
+                    */
+                }
+            
 
             else
             {
@@ -434,13 +448,13 @@ namespace remake_project2
         //
         // 측정값이 업데이트 되는 주기를 처리하는 함수
         //
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             interuptOn = true;
             try
             {
-                int buf = int.Parse(cycleTimeBox.Text) - 1;
-                if (buf >= 0 && buf <= 4)
+                int buf = int.Parse(cycleTimeBox.Text);
+                if (buf >= 1 && buf <= 5)
                 {
                     _06buf[5] = (byte)buf;
                     _06buf[3] = 0x01;
@@ -464,6 +478,16 @@ namespace remake_project2
             interuptOn = false;
         }
 
+        private static void TextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            // 텍스트 박스에서 Enter 키가 눌렸을 때
+            if (e.KeyCode == Keys.Enter)
+            {
+                // 텍스트 박스의 값을 적용
+                // 기능 설정
+            }
+        }
+
         //
         // 작성받은 Ref.Voltage를 처리하는 함수
         //
@@ -472,8 +496,7 @@ namespace remake_project2
             interuptOn = true;
             try
             {
-                float preBuf = float.Parse(refV_Box.Text) * 1000.0f;
-                int buf = Convert.ToInt32(preBuf);
+                int buf = int.Parse(refV_Box.Text);
                 if (buf >= 10 && buf <= 255)
                 {
                     _06buf[5] = (byte)buf;
@@ -492,7 +515,7 @@ namespace remake_project2
                 else
                 {
                     // 범위를 벗어난 경우에 대한 처리
-                    MessageBox.Show("입력값은 0.1V부터 5V까지 범위여야 합니다.");
+                    MessageBox.Show("입력값은 100(mV)부터 5000(mV)까지 범위여야 합니다.");
                 }
             }
             catch (FormatException)
@@ -514,8 +537,8 @@ namespace remake_project2
             interuptOn = true;
             try
             {
-                int buf = int.Parse(aveRangeBox.Text) - 1;
-                if (buf >= 0 && buf < 100)
+                int buf = int.Parse(aveRangeBox.Text);
+                if (buf >= 1 && buf < 101)
                 {
                     _06buf[5] = (byte)buf;
                     _06buf[3] = 0x03;
@@ -534,7 +557,7 @@ namespace remake_project2
             }
 
             SerialPort_Write(_06buf);
-            Task.Delay(1000);
+            Task.Delay(1000); 
             interuptOn = false;
         }
         //
@@ -545,23 +568,20 @@ namespace remake_project2
             interuptOn = true;
             try
             {
-                int buf = int.Parse(caliV_Box.Text);
-                if (buf >= 0 && buf <= 10)
+                short buf =  short.Parse(caliV_Box.Text);
+                ushort modbusValue = (ushort)(buf & 0xFFFF);
+                byte highByte = (byte)((modbusValue >> 8) & 0xFF);
+                byte lowByte = (byte)(modbusValue & 0xFF);
+                if (buf >= -2000 && buf <= 2000)
                 {
-                    _06buf[5] = (byte)buf;
-                    _06buf[3] = 0x04;
-                    _06buf[4] = 0x00;
-                }
-                else if (buf < 0 && buf >= -10)
-                {
-                    _06buf[5] = (byte)buf;
-                    _06buf[3] = 0x04;
-                    _06buf[4] = 0x01;
+                    _06buf[5] = lowByte;
+                    _06buf[4] = highByte;
+                    _06buf[3] = 0x04;                    
                 }
                 else
                 {
                     // 범위를 벗어난 경우에 대한 처리
-                    MessageBox.Show("입력값은 1부터 10까지의 정수 범위여야 합니다.");
+                    MessageBox.Show("입력값은 -2000(mV)부터 2000(mV)까지의 정수 범위여야 합니다.");
                 }
             }
             catch (FormatException)
@@ -695,7 +715,7 @@ namespace remake_project2
 
 
         //
-        // 리셋 기능을 담당하는 함수(default값으로 변환된다)
+        // 초기화 함수
         //
         private void resetBtn_Click_1(object sender, EventArgs e)
         {
@@ -714,9 +734,13 @@ namespace remake_project2
                 // 형식이 올바르지 않은 경우에 대한 처리
                 MessageBox.Show("Error");
             }
-
+            MessageBox.Show("work1");
             SerialPort_Write(_06buf);
+            MessageBox.Show("work2");
             Task.Delay(1000);
+            SerialPort_Write(_sendBuf);
+            MessageBox.Show("work3");
+            start_engine();
             interuptOn = false;
         }
 
@@ -741,5 +765,11 @@ namespace remake_project2
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -79,6 +79,7 @@ namespace remake_project2
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
+            this.loopTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intervalNumericUpDown)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -300,9 +301,10 @@ namespace remake_project2
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(136, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 12);
+            this.label2.Size = new System.Drawing.Size(24, 12);
             this.label2.TabIndex = 20;
-            this.label2.Text = "V";
+            this.label2.Text = "mV";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -548,6 +550,10 @@ namespace remake_project2
             this.textBox9.TabIndex = 25;
             this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
+            // loopTimer
+            // 
+            this.loopTimer.Interval = 2000;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -661,6 +667,7 @@ namespace remake_project2
         private System.Windows.Forms.ToolStripMenuItem 설정ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 포트설정ToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Timer loopTimer;
     }
 }
 
