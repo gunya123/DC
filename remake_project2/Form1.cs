@@ -44,7 +44,7 @@ namespace remake_project2
         public Form1()
         {
             InitializeComponent();
-            this.comboBox_port.DropDown += new System.EventHandler(comboBox_portDropDownEvent); // 콤보 박스가 드롭다운 되도록 해주는 이벤트
+            this.spBox.DropDown += new System.EventHandler(comboBox_portDropDownEvent); // 콤보 박스가 드롭다운 되도록 해주는 이벤트
 
             rxTextBox.ScrollBars = ScrollBars.Vertical;
             rxTextBox.TextChanged += TextBox_TextChanged;
@@ -83,14 +83,14 @@ namespace remake_project2
         private void button6_Click_1(object sender, EventArgs e)
         {
 
-            if (comboBox_port.Text == null)
+            if (spBox.Text == null)
             {
                 MessageBox.Show("포트를 선택해 주세요");
             }
 
             else if (!serialPort1.IsOpen)
             {
-                serialPort1.PortName = comboBox_port.Text;
+                serialPort1.PortName = spBox.Text;
                 serialPort1.BaudRate = 9600;
                 serialPort1.DataBits = 8; // 우리가 총 8개의 비트를 보내기 때문에 8로 지정.
                 serialPort1.StopBits = StopBits.One;
@@ -104,7 +104,7 @@ namespace remake_project2
                 Save_File();
                 saveTimer.Start();
                 label_status.Text = "포트가 열렸습니다";
-                comboBox_port.Enabled = false;  //COM포트설정 콤보박스 비활성화
+                spBox.Enabled = false;  //COM포트설정 콤보박스 비활성화
             }
 
             else //시리얼포트가 열려 있으면
@@ -124,7 +124,7 @@ namespace remake_project2
                 serialPort1.Close();  //시리얼포트 닫기
 
                 label_status.Text = "포트가 닫혔습니다.";
-                comboBox_port.Enabled = true;  //COM포트설정 콤보박스 활성화
+                spBox.Enabled = true;  //COM포트설정 콤보박스 활성화
                 pictureBox1.Image = Properties.Resources.GrayLED;
 
             }
@@ -172,17 +172,17 @@ namespace remake_project2
 
         public void comboBox_portDropDownEvent(object sender, EventArgs e)
         {
-            this.comboBox_port.Items.Clear();
+            this.spBox.Items.Clear();
             string[] serial_list = SerialPort.GetPortNames();
 
-            if (this.comboBox_port.Items.Count > 0)
+            if (this.spBox.Items.Count > 0)
             {
-                this.comboBox_port.SelectedIndex = 0;
+                this.spBox.SelectedIndex = 0;
             }
 
             foreach (string name in serial_list)
             {
-                this.comboBox_port.Items.Add(name);
+                this.spBox.Items.Add(name);
             }
         }
 
@@ -225,7 +225,7 @@ namespace remake_project2
                         
                         textBox6.Text = resultValue[2];
                         textBox7.Text = resultValue[3];
-                        if (textBox1.Text != resultValue[1])
+                        if (cycleTimeBox.Text != resultValue[1])
                         {
                             pictureBox2.Image = Properties.Resources.RedLED;
                         }
@@ -234,7 +234,7 @@ namespace remake_project2
                             pictureBox2.Image = Properties.Resources.GreenLED_;
                         }
 
-                        if (textBox2.Text != resultValue[2])
+                        if (refV_Box.Text != resultValue[2])
                         {
                             pictureBox3.Image = Properties.Resources.RedLED;
                         }
@@ -243,7 +243,7 @@ namespace remake_project2
                             pictureBox3.Image = Properties.Resources.GreenLED_;
                         }
 
-                        if (textBox3.Text != resultValue[3])
+                        if (aveRangeBox.Text != resultValue[3])
                         {
                             pictureBox4.Image = Properties.Resources.RedLED;
                         }
@@ -252,7 +252,7 @@ namespace remake_project2
                             pictureBox4.Image = Properties.Resources.GreenLED_;
                         }
 
-                        if (textBox4.Text != resultValue[4])
+                        if (caliV_Box.Text != resultValue[4])
                         {
                             pictureBox5.Image = Properties.Resources.RedLED;
                         }
@@ -367,10 +367,10 @@ namespace remake_project2
         //
         private void start_engine()
         {
-            textBox1.Text = "1";
-            textBox2.Text = "5";
-            textBox3.Text = "1";
-            textBox4.Text = "0";
+            cycleTimeBox.Text = "1";
+            refV_Box.Text = "5";
+            aveRangeBox.Text = "1";
+            caliV_Box.Text = "0";
         }
 
 
@@ -439,7 +439,7 @@ namespace remake_project2
             interuptOn = true;
             try
             {
-                int buf = int.Parse(textBox1.Text) - 1;
+                int buf = int.Parse(cycleTimeBox.Text) - 1;
                 if (buf >= 0 && buf <= 4)
                 {
                     _06buf[5] = (byte)buf;
@@ -472,7 +472,7 @@ namespace remake_project2
             interuptOn = true;
             try
             {
-                float preBuf = float.Parse(textBox2.Text) * 1000.0f;
+                float preBuf = float.Parse(refV_Box.Text) * 1000.0f;
                 int buf = Convert.ToInt32(preBuf);
                 if (buf >= 10 && buf <= 255)
                 {
@@ -514,7 +514,7 @@ namespace remake_project2
             interuptOn = true;
             try
             {
-                int buf = int.Parse(textBox3.Text) - 1;
+                int buf = int.Parse(aveRangeBox.Text) - 1;
                 if (buf >= 0 && buf < 100)
                 {
                     _06buf[5] = (byte)buf;
@@ -545,7 +545,7 @@ namespace remake_project2
             interuptOn = true;
             try
             {
-                int buf = int.Parse(textBox4.Text);
+                int buf = int.Parse(caliV_Box.Text);
                 if (buf >= 0 && buf <= 10)
                 {
                     _06buf[5] = (byte)buf;
@@ -625,7 +625,7 @@ namespace remake_project2
             try
             {
                 StreamWriter sw = File.AppendText(fileName);
-                sw.WriteLine($"{data_time}, {(resultVolBox.Text)}, {(textBox2.Text)}, {(textBox4.Text)}");
+                sw.WriteLine($"{data_time}, {(resultVolBox.Text)}, {(refV_Box.Text)}, {(caliV_Box.Text)}");
                 sw.Close();
             }
             catch (Exception)

@@ -66,3 +66,15 @@ C:\Users\KJH\Desktop\2nd_P_check_voltage\remake_project2\obj\Debug\remake_projec
 C:\Users\KJH\Desktop\2nd_P_check_voltage\remake_project2\obj\Debug\remake_project2.csproj.CoreCompileInputs.cache
 C:\Users\KJH\Desktop\2nd_P_check_voltage\remake_project2\obj\Debug\remake_project2.exe
 C:\Users\KJH\Desktop\2nd_P_check_voltage\remake_project2\obj\Debug\remake_project2.pdb
+C:\Users\user\Desktop\새 폴더 (2)\2nd_P_check_voltage_01\2nd_P_check_voltage\remake_project2\bin\Debug\remake_project2.exe.config
+C:\Users\user\Desktop\새 폴더 (2)\2nd_P_check_voltage_01\2nd_P_check_voltage\remake_project2\bin\Debug\remake_project2.exe
+C:\Users\user\Desktop\새 폴더 (2)\2nd_P_check_voltage_01\2nd_P_check_voltage\remake_project2\bin\Debug\remake_project2.pdb
+C:\Users\user\Desktop\새 폴더 (2)\2nd_P_check_voltage_01\2nd_P_check_voltage\remake_project2\obj\Debug\remake_project2.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\새 폴더 (2)\2nd_P_check_voltage_01\2nd_P_check_voltage\remake_project2\obj\Debug\remake_project2.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\새 폴더 (2)\2nd_P_check_voltage_01\2nd_P_check_voltage\remake_project2\obj\Debug\remake_project2.csproj.ResolveComReference.cache
+C:\Users\user\Desktop\새 폴더 (2)\2nd_P_check_voltage_01\2nd_P_check_voltage\remake_project2\obj\Debug\remake_project2.Form1.resources
+C:\Users\user\Desktop\새 폴더 (2)\2nd_P_check_voltage_01\2nd_P_check_voltage\remake_project2\obj\Debug\remake_project2.Properties.Resources.resources
+C:\Users\user\Desktop\새 폴더 (2)\2nd_P_check_voltage_01\2nd_P_check_voltage\remake_project2\obj\Debug\remake_project2.csproj.GenerateResource.cache
+C:\Users\user\Desktop\새 폴더 (2)\2nd_P_check_voltage_01\2nd_P_check_voltage\remake_project2\obj\Debug\remake_project2.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\새 폴더 (2)\2nd_P_check_voltage_01\2nd_P_check_voltage\remake_project2\obj\Debug\remake_project2.exe
+C:\Users\user\Desktop\새 폴더 (2)\2nd_P_check_voltage_01\2nd_P_check_voltage\remake_project2\obj\Debug\remake_project2.pdb
