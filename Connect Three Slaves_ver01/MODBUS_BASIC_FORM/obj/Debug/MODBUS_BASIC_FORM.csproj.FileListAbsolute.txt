@@ -1,0 +1,58 @@
+C:\고건웅\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.exe.config
+C:\고건웅\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.exe
+C:\고건웅\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.pdb
+C:\고건웅\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.AssemblyReference.cache
+C:\고건웅\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.Form1.resources
+C:\고건웅\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.Properties.Resources.resources
+C:\고건웅\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.GenerateResource.cache
+C:\고건웅\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.CoreCompileInputs.cache
+C:\고건웅\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.exe
+C:\고건웅\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.pdb
+C:\Users\KJH\Desktop\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.exe.config
+C:\Users\KJH\Desktop\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.exe
+C:\Users\KJH\Desktop\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.pdb
+C:\Users\KJH\Desktop\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.AssemblyReference.cache
+C:\Users\KJH\Desktop\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.Properties.Resources.resources
+C:\Users\KJH\Desktop\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.GenerateResource.cache
+C:\Users\KJH\Desktop\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.CoreCompileInputs.cache
+C:\Users\KJH\Desktop\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.exe
+C:\Users\KJH\Desktop\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.pdb
+C:\Users\KJH\Desktop\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.SerialPortSetting.resources
+C:\Users\KJH\Desktop\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.Log.resources
+C:\Users\KJH\Desktop\MODBUS_BASIC_FORM\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.adress06.resources
+C:\Users\KJH\Desktop\작업 백업 기록\정완식 요청 사항ver1\MODBUS_BASIC_FORM - 완성\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.exe.config
+C:\Users\KJH\Desktop\작업 백업 기록\정완식 요청 사항ver1\MODBUS_BASIC_FORM - 완성\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.exe
+C:\Users\KJH\Desktop\작업 백업 기록\정완식 요청 사항ver1\MODBUS_BASIC_FORM - 완성\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.pdb
+C:\Users\KJH\Desktop\작업 백업 기록\정완식 요청 사항ver1\MODBUS_BASIC_FORM - 완성\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.AssemblyReference.cache
+C:\Users\KJH\Desktop\작업 백업 기록\정완식 요청 사항ver1\MODBUS_BASIC_FORM - 완성\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.adress06.resources
+C:\Users\KJH\Desktop\작업 백업 기록\정완식 요청 사항ver1\MODBUS_BASIC_FORM - 완성\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.Log.resources
+C:\Users\KJH\Desktop\작업 백업 기록\정완식 요청 사항ver1\MODBUS_BASIC_FORM - 완성\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.Properties.Resources.resources
+C:\Users\KJH\Desktop\작업 백업 기록\정완식 요청 사항ver1\MODBUS_BASIC_FORM - 완성\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.SerialPortSetting.resources
+C:\Users\KJH\Desktop\작업 백업 기록\정완식 요청 사항ver1\MODBUS_BASIC_FORM - 완성\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.GenerateResource.cache
+C:\Users\KJH\Desktop\작업 백업 기록\정완식 요청 사항ver1\MODBUS_BASIC_FORM - 완성\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.CoreCompileInputs.cache
+C:\Users\KJH\Desktop\작업 백업 기록\정완식 요청 사항ver1\MODBUS_BASIC_FORM - 완성\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.exe
+C:\Users\KJH\Desktop\작업 백업 기록\정완식 요청 사항ver1\MODBUS_BASIC_FORM - 완성\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.pdb
+C:\Users\KJH\Desktop\Connect Three Slaves(origin)\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.exe.config
+C:\Users\KJH\Desktop\Connect Three Slaves(origin)\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.exe
+C:\Users\KJH\Desktop\Connect Three Slaves(origin)\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.pdb
+C:\Users\KJH\Desktop\Connect Three Slaves(origin)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.AssemblyReference.cache
+C:\Users\KJH\Desktop\Connect Three Slaves(origin)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.adress06.resources
+C:\Users\KJH\Desktop\Connect Three Slaves(origin)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.Log.resources
+C:\Users\KJH\Desktop\Connect Three Slaves(origin)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.Properties.Resources.resources
+C:\Users\KJH\Desktop\Connect Three Slaves(origin)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.SerialPortSetting.resources
+C:\Users\KJH\Desktop\Connect Three Slaves(origin)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.GenerateResource.cache
+C:\Users\KJH\Desktop\Connect Three Slaves(origin)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.CoreCompileInputs.cache
+C:\Users\KJH\Desktop\Connect Three Slaves(origin)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.exe
+C:\Users\KJH\Desktop\Connect Three Slaves(origin)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.pdb
+C:\Users\KJH\Desktop\Connect Three Slaves(진욱 컨펌)\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.exe.config
+C:\Users\KJH\Desktop\Connect Three Slaves(진욱 컨펌)\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.exe
+C:\Users\KJH\Desktop\Connect Three Slaves(진욱 컨펌)\MODBUS_BASIC_FORM\bin\Debug\MODBUS_BASIC_FORM.pdb
+C:\Users\KJH\Desktop\Connect Three Slaves(진욱 컨펌)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.AssemblyReference.cache
+C:\Users\KJH\Desktop\Connect Three Slaves(진욱 컨펌)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.adress06.resources
+C:\Users\KJH\Desktop\Connect Three Slaves(진욱 컨펌)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.Log.resources
+C:\Users\KJH\Desktop\Connect Three Slaves(진욱 컨펌)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.Properties.Resources.resources
+C:\Users\KJH\Desktop\Connect Three Slaves(진욱 컨펌)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.SerialPortSetting.resources
+C:\Users\KJH\Desktop\Connect Three Slaves(진욱 컨펌)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.GenerateResource.cache
+C:\Users\KJH\Desktop\Connect Three Slaves(진욱 컨펌)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.csproj.CoreCompileInputs.cache
+C:\Users\KJH\Desktop\Connect Three Slaves(진욱 컨펌)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.exe
+C:\Users\KJH\Desktop\Connect Three Slaves(진욱 컨펌)\MODBUS_BASIC_FORM\obj\Debug\MODBUS_BASIC_FORM.pdb
